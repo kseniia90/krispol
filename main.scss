@@ -266,15 +266,12 @@ body {
         position: relative;
         z-index: 2;
         &__item {
-            // margin: 0 auto 20px;
             position: relative;
-            // height: 2390px; // без висоти лагає складання 
         }
         &__title {
             cursor: pointer;
             padding: 45px;
             background-color: $gray;
-            // @include flex(center, center, row);
             gap: 35px;
             text-align: center;
             @include font($font-bold, 40px, 49px, #FFFFFF);
@@ -294,7 +291,6 @@ body {
         &__arrow {
             -webkit-transition: all 0.2s ease-out;
             transition: all 0.2s ease-out;
-            // @include flex(center, center, row);
             display:inline-block;
             margin-left: 35px;
         }
