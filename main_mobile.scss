@@ -1,0 +1,309 @@
+@import './scss/normalize.scss';
+@import './scss/vars_and_mixins.scss';
+@import './scss/fonts.scss';
+
+$yellow: #FFD514;
+$gray: #464848;
+
+body {
+    @include font($font-medium, 15px, 20px, $gray); 
+}
+.title {
+    @include font($font-bold, 30px, 37px, #FFFFFF);
+}
+.banner-kr {
+    &__header {
+        height: 146px;
+        &-title {
+            @include font($font-bold, 35px, 43px, $gray); 
+        }
+        &-logo {
+            display: none;
+        }
+        &-logo-mobile {
+            display: inline;
+            margin-bottom: -10px
+        }
+    }
+    &__content {
+        margin-bottom: 60px;
+        img {
+            // height: 359px;
+        }
+        &-text-block {
+            @include flex(center, center, row); 
+            padding: 0 15px;
+        }
+        &-side {
+            @include flex(center, center, column); 
+            margin-right: 0px;
+        }
+
+        &-title {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &-form {
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        &-inputs-block {
+            gap: 16px; 
+            flex-wrap: wrap;
+        }
+        &-input {
+            padding: 16px 10px;
+            max-width: 176px;
+            &::placeholder {
+                @include font($font-regular, 15px, 18px, $gray);
+            }
+        }
+        &-button {
+            @include font($font-bold, 15px, 18px, $gray); 
+            padding: 15px 20px;
+        }
+        &-text {
+            @include font($font-medium, 15px, 18px, #FFFFFF); 
+        }
+    }
+    &__advantages {
+        margin-bottom: 61px;
+        &-title {
+            margin-top: 30px;
+        }
+        &-logo {
+            padding:15px 16px;
+            width: 49.065421%; /* 210/428 */
+            img {
+                width: 100%
+            }
+        }
+        &-right {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        &__item {
+            padding: 25px 0 30px;
+            min-width: 243px;
+            &-big-text {
+                @include font($font-bold, 70px, 85px, $gray); 
+            }
+            &-medium-text {
+                @include font($font-bold, 30px, 37px, $gray); 
+            }
+            &-small-text {
+                @include font($font-medium, 15px, 18px, $gray); 
+            }
+        }
+    }
+    &__tab {
+        margin-bottom: 60px;
+        .tab button {
+            @include font($font-medium, 25px, 30px, $yellow);
+            padding: 19px 20px;
+          }
+          .tabcontent {
+            padding: 30px 15px;
+            &-text {
+                @include font($font-medium, 15px, 21px, $gray);
+                margin-bottom: 30px;
+            }
+            &-light-text {
+                @include font($font-medium, 15px, 18px, $gray);
+            }
+          }  
+    }
+    &__help {
+        margin-bottom: 60px;
+        &-title {
+            margin: 30px auto 15px;
+        }
+        &-text {
+            @include font($font-medium, 20px, 24px, $gray); 
+            margin: 0 auto 30px;
+        }
+        &-form {
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        &-input {
+            padding: 16px 10px;
+            max-width: 176px;
+            &::placeholder {
+                @include font($font-regular, 15px, 18px, $gray);
+            }
+        }
+        &-button {
+            @include font($font-bold, 15px, 18px, #FFFFFF); 
+            padding: 15px 20px;
+        }
+    }
+}
+.accordion-kr {
+    .accordion {    
+        &__title {
+            padding: 30px 45px;
+            display: block;
+            @include font($font-bold, 30px, 37px, #FFFFFF);
+        }
+        .accordion__title.accordion-active {
+            @include font($font-medium, 30px, 37px, $gray);
+        }
+        &__arrow {
+            margin-left: 15px;
+        }
+        
+        &__content {
+            margin: 30px auto 0;
+            &__block1 {
+                row-gap: 30px;
+                margin: 0 auto 30px;
+                &__item {
+                    gap: 15px;
+                    &-text {
+                        @include font($font-medium, 15px, 18px, $gray);
+                    }
+                }
+            }
+            &__block2 {
+                &-text {
+                    margin: 0 auto 30px;
+                }
+                &-accordions {
+                    gap: 30px;
+                }
+                .accordion-small-1, .accordion-small-2, .accordion-small-3 {
+                    max-width: 398px;
+                    &__title {
+                        width: 398px;
+                        padding: 20px 65px 20px 20px;
+                        @include font($font-bold, 15px, 18px, $gray); 
+                    }
+                    &__content {
+                        padding: 25px 0;
+                    }                        
+                }
+            }
+            &__block3 {
+                margin: 60px auto;
+                &-title {
+                    margin: 0 auto 30px;
+                }
+                &__top {
+                    margin-bottom: 30px;
+                    padding: 30px 15px;
+                    height: auto;
+                    img {
+                        margin-top: 0px;
+                        width: 237px;
+                        left: auto;
+                        right: 0;
+                    }
+                    .accordion__content__block3__text-block {
+                        @media(max-width: 696px) {
+                            width: 100%;
+                            &-title {
+                                width: 42.462312%; /* 169/398 */
+                            }
+                        }
+                    }
+                }
+                &__text-block {
+                    &-title {
+                        @include font($font-bold, 25px, 30px, $gray);
+                        margin: 0 0 15px;
+                    }
+                    &-text {
+                        @include font($font-medium, 15px, 19px, $gray);
+                        margin-bottom: 15px;
+                    }
+                    &-price {
+                        @include font($font-bold, 25px, 30px, $yellow);
+                    }
+                    &__list {
+                        &-item {
+                            @include font($font-medium, 15px, 18px, $gray);
+                            &:not(:last-child) {
+                                margin-right: 0px;
+                            }                            
+                        }
+                    }
+                }
+                &__bottom {
+                    // border: 1px solid $gray;
+                    margin-bottom: 0px;
+                    // @include flex(flex-start, center, row);
+                    padding: 30px 15px;
+                    position: relative;
+                    height: auto;
+                    img {
+                        // width: 260px;
+                        top: 0;
+                        right: -10%;
+                    }
+                    .accordion__content__block3__text-block {
+                        @media(max-width: 589px) {
+                            width: 100%;
+                            &-title {
+                                width: 41.457286%; /* 165/398 */
+                            }
+                            &-text {
+                                width: 80%;
+                            }
+                        }
+                    }
+                            
+   
+                    // @media(max-width: 960px) {
+                    //     padding: 30px 15px;
+                    //     height: auto;
+                    //     img {
+                    //         width: 50%;
+                    //         top: 0;
+                    //         right: -10%;  
+                    //     }
+                    // }
+                }
+            }
+        }       
+    }
+    }  
+    .gallery {
+        &-title {
+            margin: 0 auto 30px;
+            color: $gray;
+        }
+        &__img-block {
+            gap: 8px;
+            &__block1 {
+                // flex: 0 0 27.464789%; /* 390/1420 */
+                // display: flex;
+                gap: 8px;
+                // flex-wrap: wrap;
+            }
+            &__block2 {
+                // flex: 0 0 20.492958%; /* 291/1420 */
+                // display: flex;
+                gap: 8px;
+                // flex-wrap: wrap;
+            }
+            &__block3 {
+                // flex: 0 0 20.492958%; /* 291/1420 */
+                // display: flex;
+                gap: 8px;
+                // flex-wrap: wrap;
+            }
+            &__block4 {
+                // flex: 0 0 28.380282%; /* 403/1420 */
+                // flex: 0 0 27.464789%; /* 390/1420 */
+                // display: flex;
+                gap: 8px;
+            }
+        }
+        &-show-more {
+            padding-top: 30px;
+        }
+    }
+
+

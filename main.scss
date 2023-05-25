@@ -1,0 +1,569 @@
+@import './scss/normalize.scss';
+@import './scss/vars_and_mixins.scss';
+@import './scss/fonts.scss';
+
+$yellow: #FFD514;
+$gray: #464848;
+
+body {
+    @include font($font-medium, 20px, 24px, $gray); 
+}
+.container-kr {
+    margin: 0 auto;
+    max-width: 1450px;
+    padding: 0 15px;
+}
+.title {
+    @include font($font-bold, 40px, 49px, #FFFFFF);
+}
+.banner-kr {
+    &__header {
+        @include flex(space-between, center, row); 
+        height: 174px;
+        &-title {
+            @include font($font-bold, 48px, 59px, $gray); 
+        }
+        &-logo-mobile {
+            display: none;
+        }
+
+    }
+    &__content {
+        @include flex(space-between, center, row); 
+        position: relative;
+        margin-bottom: 100px;
+        img {
+            width: 100%;
+            height: 446px;
+        }
+        &-text-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            @include flex(flex-end, center, row); 
+        }
+        &-side {
+            max-width: 606px;
+            @include flex(center, center, column); 
+            margin-right: 60px;
+        }
+
+        &-title {
+            margin-bottom: 35px;
+        }
+        &-form {
+            @include flex(center, center, column); 
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-bottom: 35px;
+        }
+        &-inputs-block {
+            @include flex(center, center, row);
+            gap: 36px; 
+            width: 100%;
+        }
+        &-input {
+            padding: 21px 20px 20px;
+            max-width: 285px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                @include font($font-regular, 20px, 24px, $gray);
+                opacity: 0.5;
+            }
+        }
+        &-button {
+            @include font($font-bold, 20px, 24px, $gray); 
+            padding: 21px 25px 20px;
+            background-color: $yellow;
+            border: none;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: #FFFFFF;
+            }
+        }
+        &-text {
+            @include font($font-medium, 20px, 24px, #FFFFFF); 
+            text-align: center;
+        }
+    }
+    &__advantages {
+        @include flex(center, stretch, row); 
+        flex-wrap: wrap;
+        gap: 37px;
+        margin-bottom: 101px;
+        &-left {
+            flex: 1 0 42.323944%; /* 601/1420 */
+            position: relative;
+            > img {
+                width: 100%;
+            }
+            &-content-block {
+                @include flex(space-between, center, column); 
+                position: absolute;
+                top: 0;
+                left: 1px;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        &-title {
+            align-self: start;
+            max-width: 345px;
+            margin-top: 45px;
+            @media(max-width: 1449px) {
+                align-self: center;
+                max-width: none;
+            }
+        }
+        &-logo {
+            align-self: flex-end;
+            padding: 21px 25px 29px;
+            background-color: #FFFFFF;
+            @media(max-width: 1449px) {
+                align-self: center;
+            }
+        }
+        &-right {
+            @include flex(space-between, stretch, row); 
+            flex: 1 0 55.070423%; /* 782/1420 */
+        }
+        &__item {
+            @include flex(flex-start, center, column); 
+            border-top: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            flex: 0 0 28%;
+            text-align: center;
+            padding: 42px 0;
+            &-big-text {
+                @include font($font-bold, 80px, 98px, $gray); 
+                white-space: nowrap
+            }
+            &-medium-text {
+                @include font($font-bold, 40px, 49px, $gray); 
+            }
+            &-small-text {
+                @include font($font-medium, 20px, 24px, $gray); 
+                margin: 15px auto 0;
+            }
+        }
+    }
+    &__tab {
+        margin-bottom: 100px;
+        .tab {
+            overflow: hidden;
+            @include flex(flex-start, center, row); 
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .tab button {
+            background-color: inherit;
+            position: relative;
+            z-index: 5;
+            // float: left;
+            white-space: nowrap;
+            background-color: $gray;
+            border: 1px solid $gray;
+            margin-right: 1px;
+            margin-bottom: -2px;
+            @include font($font-medium, 30px, 37px, $yellow);
+            outline: none;
+            cursor: pointer;
+            padding: 25px;
+            transition: 0.3s;
+          }
+          .tab button.active {
+            background-color: #FFFFFF;
+            color: $gray;
+            border-bottom: none;
+            margin-right: 0;
+            &:not(:first-child) {
+                border-left: none;
+                margin-left: -1px;
+            }
+          }
+          .tabcontent {
+            display: none;
+            padding: 45px 45px 25px;
+            margin-top: -2px;
+            border: 1px solid $gray;
+            &-text {
+                @include font($font-medium, 20px, 26px, $gray);
+                margin-bottom: 45px;
+            }
+            &-img-block {
+                @include flex(center, center, row); 
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            &-light-text {
+                opacity: 0.5;
+                width: 100%;
+                text-align: right;
+            }
+          }
+          #VENTEK2RC {
+            display: block;
+          }  
+    }
+    &__help {
+        background-color: $yellow;
+        @include flex(center, center, column);
+        margin-bottom: 100px;
+        &-content {
+            padding: 15px;
+            text-align: center;
+        }
+        &-title {
+            color: $gray;
+            margin: 45px auto 15px;
+        }
+        &-text {
+            @include font($font-medium, 25px, 30px, $gray); 
+            margin: 0 auto 45px;
+        }
+        &-form {
+            @include flex(center, center, row); 
+            flex-wrap: wrap;
+            gap: 35px;
+            margin-bottom: 45px;
+        }
+        &-input {
+            padding: 21px 20px 20px;
+            max-width: 285px;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+            &::placeholder {
+                @include font($font-regular, 20px, 24px, $gray);
+                opacity: 0.5;
+            }
+        }
+        &-button {
+            @include font($font-bold, 20px, 24px, #FFFFFF); 
+            padding: 21px 25px 20px;
+            background-color: $gray;
+            border: none;
+            transition: all 0.3s ease;
+            &:hover {
+                background-color: #FFFFFF;
+                color: $gray;
+            }
+        }
+    }
+}
+.accordion-kr {
+    .accordion {
+        position: relative;
+        z-index: 2;
+        &__item {
+            // margin: 0 auto 20px;
+            position: relative;
+            // height: 2390px; // без висоти лагає складання 
+        }
+        &__title {
+            cursor: pointer;
+            padding: 45px;
+            background-color: $gray;
+            // @include flex(center, center, row);
+            gap: 35px;
+            text-align: center;
+            @include font($font-bold, 40px, 49px, #FFFFFF);
+        }
+        .accordion__arrow-item svg{
+            fill: none;
+            stroke-width: 3;
+            stroke: #FFFFFF;
+        }
+        .accordion__title.accordion-active {
+            background-color: $yellow;
+            @include font($font-medium, 40px, 49px, $gray);
+            .accordion__arrow-item svg{
+                stroke: $gray;
+            }
+        }
+        &__arrow {
+            -webkit-transition: all 0.2s ease-out;
+            transition: all 0.2s ease-out;
+            // @include flex(center, center, row);
+            display:inline-block;
+            margin-left: 35px;
+        }
+        &__rotate {
+            transform: translate(0%, 15%) rotate(180deg) ;
+        }
+        &__content {
+            display: block;
+            margin: 45px auto 0;
+            &__block1 {
+                @include flex(center, center, row);
+                flex-wrap: wrap;
+                row-gap: 45px;
+                margin: 0 auto 100px;
+                &__item {
+                    @include flex(space-between, center, row);
+                    gap: 30px;
+                    max-width: 49.295775%; /* 700/1420 */
+                    @media(max-width: 1300px) {
+                       max-width: none;
+                       @include flex(space-between, center, column);
+                       text-align: center;
+                       width: 100%;
+                       &:not(:last-child) {
+                        border-bottom: 1px solid $gray;
+                        }  
+                    }
+                    &-text {
+                        text-align: left;
+                        max-width: 340px;
+                        @media(max-width: 1300px) {
+                            text-align: center;
+                            max-width: none;
+                            width: 100%;
+                            margin-bottom: 30px;
+                         }
+                    }
+                }
+            }
+            &__block2 {
+                text-align: center;
+                &-title {
+                    color: $gray;
+                    margin: 0 auto 15px;
+                }
+                &-text {
+                    margin: 0 auto 45px;
+                }
+                &-accordions {
+                    @include flex(center, center, row);
+                    flex-wrap: wrap;
+                    gap: 20px;
+                }
+                .accordion-small-1, .accordion-small-2, .accordion-small-3 {
+                    max-width: 460px;
+                    position: relative;
+                    z-index: 2;
+                    &__item {
+                        position: relative;
+                    }
+                    &__title {
+                        cursor: pointer;
+                        width: 460px;
+                        position: relative;
+                        padding: 25px 65px 25px 25px;
+                        background-color: $yellow;
+                        white-space: nowrap;
+                        @include font($font-bold, 20px, 24px, $gray); 
+                        text-align: left;
+                    }
+                    &__arrow {
+                        position: absolute;
+                        top: 40%;
+                        right: 5%;
+                        -webkit-transition: all 0.2s ease-out;
+                        transition: all 0.2s ease-out;
+                        @include flex(center, center, row);
+                        &-item {
+                            @include flex(center, center, row);
+                        }
+                    }
+                    &__rotate {
+                        transform: rotate(180deg);
+                    }
+                    .accordion-small-1__arrow-item svg, .accordion-small-2__arrow-item svg, .accordion-small-3__arrow-item svg{
+                        fill: none;
+                        stroke-width: 3;
+                        stroke: #464848;
+                    }
+                    .accordion-small-1__title.accordion-active, .accordion-small-2__title.accordion-active, .accordion-small-3__title.accordion-active {
+                        background-color: $gray;
+                        @include font($font-medium, 20px, 24px, #FFFFFF); 
+                        .accordion-small-1__arrow-item svg, .accordion-small-2__arrow-item svg, .accordion-small-3__arrow-item svg{
+                            stroke: #FFFFFF;
+                        }
+                    }
+                    &__content {
+                        display: block;
+                        padding: 45px 0;
+                        border-bottom: 1px solid $gray;
+                        img {
+                            width: 100%;
+                        }
+                        
+                    }                        
+                }
+            }
+            &__block3 {
+                margin: 100px auto;
+                &-title {
+                    color: $gray;
+                    text-align: center;
+                    margin: 0 auto 45px;
+                }
+                &__top {
+                    border: 1px solid $gray;
+                    margin-bottom: 35px;
+                    @include flex(flex-end, center, row);
+                    padding: 45px;
+                    position: relative;
+                    height: 265px;
+                    img {
+                        margin-top: -20px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    @media(max-width: 1085px) {
+                        justify-content: flex-start;
+                        padding: 30px 15px;
+                        height: auto;
+                        img {
+                            // width: 32.394366%; /* 460/1420 */
+                            width: 40%;
+                            right: 0;
+                            left: auto;
+                            margin-top: 0;    
+                        }
+                    }
+                }
+                &__text-block {
+                    width: 61.267606%; /* 870/1420 */
+                    
+                    &-title {
+                        @include font($font-bold, 30px, 37px, $gray);
+                        margin: 15px 0;
+                    }
+                    &-text {
+                        @include font($font-medium, 20px, 24px, $gray);
+                        margin-bottom: 35px;
+                    }
+                    &-price {
+                        @include font($font-bold, 30px, 37px, $yellow);
+                        @media(max-width: 960px) {
+                            text-align: right;
+                        }
+                    }
+                    &__list {
+                        &-item {
+                            display: inline-block;
+                            @include font($font-medium, 20px, 24px, $gray);
+                            padding-left: 35px;
+                            position: relative;
+                            &:not(:last-child) {
+                                margin-right: 47px;
+                                margin-bottom: 21px;
+                            }
+                            &:before {
+                                content: "";
+                                width: 20px;
+                                height: 20px;
+                                display: block;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background-image: url(./img/check.svg);
+                            }  
+                        }
+                    }
+                }
+                &__bottom {
+                    border: 1px solid $gray;
+                    margin-bottom: 155px;
+                    @include flex(flex-start, center, row);
+                    padding: 45px;
+                    position: relative;
+                    height: 249px;
+                    img {
+                        position: absolute;
+                        top: -20px;
+                        right: 0;
+                    }
+                    @media(max-width: 960px) {
+                        padding: 30px 15px;
+                        height: auto;
+                        img {
+                            width: 50%;
+                            top: 0;
+                            right: -10%;  
+                        }
+                    }
+                }
+            }
+        }       
+    }
+    }  
+    .gallery {
+        &-title {
+            color: $gray;
+            text-align: center;
+            margin: 0 auto 45px;
+        }
+        &__img-block {
+            @include flex(center, stretch, row);
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            @media(max-width:1030px) {
+            }
+            &__block1 {
+                flex: 0 0 27.464789%; /* 390/1420 */
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            &__block2 {
+                flex: 0 0 20.492958%; /* 291/1420 */
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            &__block3 {
+                flex: 0 0 20.492958%; /* 291/1420 */
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            &__block4 {
+                // flex: 0 0 28.380282%; /* 403/1420 */
+                flex: 0 0 27.464789%; /* 390/1420 */
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+        }
+        .hideContent {
+            overflow: hidden;
+            line-height: 1px;
+            height: 1px;
+            padding-top: 1px;
+        }
+        .showContent {
+            line-height: 1em;
+            height: auto;
+        }
+        &-show-more {
+            text-align: center;
+            padding-top: 45px;
+            svg {
+                fill: none;
+                stroke: #464848;
+                stroke-width: 3;
+            }
+            &:hover {
+                svg {
+                    stroke: #FFD514;
+                }  
+            }
+        }
+    }
+
+
