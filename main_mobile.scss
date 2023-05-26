@@ -115,7 +115,7 @@ body {
           }  
     }
     &__help {
-        margin-bottom: 60px;
+        // margin-bottom: 60px;
         &-title {
             margin: 30px auto 15px;
         }
@@ -141,6 +141,7 @@ body {
     }
 }
 .accordion-kr {
+    margin-top: 60px;
     .accordion {    
         &__title {
             padding: 30px 45px;
@@ -257,22 +258,19 @@ body {
     }  
     .gallery {
         &-title {
-            margin: 0 auto 30px;
+            margin: 60px auto 30px;
             color: $gray;
         }
         &__img-block {
             gap: 8px;
-            &__block1 {
-                gap: 8px;
-            }
-            &__block2 {
-                gap: 8px;
-            }
-            &__block3 {
-                gap: 8px;
-            }
-            &__block4 {
-                gap: 8px;
+            display: block;  
+            margin-bottom: 0;
+            &__block1, &__block2, &__block3, &__block4 {
+                display: block;
+                img {
+                    width: 100%;
+                    margin-bottom: 8px;
+                }
             }
         }
         &-show-more {

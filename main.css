@@ -605,7 +605,6 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 100px;
 }
 .banner-kr__help-content {
   padding: 15px;
@@ -668,6 +667,9 @@ body {
   color: #464848;
 }
 
+.accordion-kr {
+  margin-top: 100px;
+}
 .accordion-kr .accordion {
   position: relative;
   z-index: 2;
@@ -957,7 +959,7 @@ body {
 .gallery-title {
   color: #464848;
   text-align: center;
-  margin: 0 auto 45px;
+  margin: 100px auto 45px;
 }
 .gallery__img-block {
   display: flex;

@@ -25,7 +25,7 @@ $(function () {
     e.preventDefault();
     var $this = $(this);
     if (!$this.hasClass("accordion-active")) {
-      $(".accordion__content").slideDown(400);
+      $(".accordion__content").slideDown(100);
       $(".accordion__title").removeClass("accordion-active");
       $(".accordion__arrow").removeClass("accordion__rotate");
     }
@@ -82,22 +82,6 @@ $(function () {
     $(".accordion-small-3__arrow", this).toggleClass("accordion__rotate");
   }); 
 });
-
-// $(function () {
-//   // accordion-gallery
-//   $(".accordion-gallery__title").on("click", function (e) {
-//     e.preventDefault();
-//     var $this = $(this);
-//     if (!$this.hasClass("accordion-active")) {
-//       $(".accordion-gallery__content").slideDown(400);
-//       $(".accordion-gallery__title").removeClass("accordion-active");
-//       $(".accordion-gallery__arrow").removeClass("accordion__rotate");
-//     }
-//     $this.toggleClass("accordion-active");
-//     $this.next().slideToggle();
-//     $(".accordion-gallery__arrow", this).toggleClass("accordion__rotate");
-//   }); 
-// });
 
 $(".gallery-show-more").on("click", function() {
   $(".gallery-content").toggleClass("showContent");
